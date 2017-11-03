@@ -1,0 +1,105 @@
+<!--<!DOCTYPE html>
+                <html>
+                <head>-->
+                    <meta charset="UTF-8">
+                    <title>Расчет оборудования теплового пункта</title>
+
+	<!--<script >
+	function deleteRow(r){
+	var i=r.parentNode.parentNode.rowIndex;
+	document.getElementById("Table1").deleteRow(i);
+	}
+	function addRow(){
+
+	var table=document.getElementById("Table1");
+	var index=table.rows.length;
+	var row=table.insertRow(index-1);
+	var name=row.insertCell(0);
+	var countheat=row.insertCell(1);
+	var tempT11=row.insertCell(2);
+	var tempT21=row.insertCell(3);
+	var heightsyst=row.insertCell(4);
+	var dh=row.insertCell(5);
+	var countglikol=row.insertCell(6);
+	var del=row.insertCell(7);
+
+	name.innerHTML="<tr><td><select name='"+index+"system'><option value=\"1\">Отопление</option><option value=\"2\">Вентиляция</option><option value=\"3\">ГВС</option></select></td></tr>";
+	countheat.innerHTML="<tr><td><input name=\""+index+"countheat\" type=\"text\" size=\"1\" required></td></tr>";
+	tempT11.innerHTML="<tr><td><input name=\""+index+"tempt11\" type=\"text\" size=\"1\" required></td></tr>";
+	tempT21.innerHTML="<tr><td><input name=\""+index+"tempt21\" type=\"text\" size=\"1\" required></td></tr>";
+	heightsyst.innerHTML="<tr><td><input name=\""+index+"heightsyst\" type=\"text\" size=\"1\" required></td></tr>";
+	dh.innerHTML="<tr><td><input name=\""+index+"dh\" type=\"text\" size=\"1\" required></td></tr>";
+	countglikol.innerHTML="<tr><td><input name=\""+index+"countglikol\" type=\"text\" size=\"1\" required></td></tr>";
+	del.innerHTML="<tr><td><button type=\"button\" onclick=\"deleteRow(this)\">Удалить</button> </td></tr>";
+	}
+	</script>-->
+                <!--</head>
+                <body>-->
+                  <h3>Расчет оборудования теплового пункта</h3>
+                    <form accept-charset="UTF-8" action="Calculate" method="POST" >
+                    <label for="nameobject">Наименование объекта :</label>
+                    <input charset="UTF-8" type="text" name="name" required>
+      <p>              </p>
+                   <table border="1" cellpadding="2" cols="4" class='table_calc_edit' width=100% >
+        <caption>Параметры тепловой сети :</caption>
+                     <tr> 
+                       <td></td>
+                       <td>Температура в зимний период</td>
+                       <td>Температура в летний период</td>
+                       <td>Давление</td>
+                     </tr>
+                     <tr>
+                       <td>Подающий трубопровод</td>
+                       <td><input name="tempT1winter" type="text" size="1" required></td>
+                       <td><input name="tempT1summer" type="text" size="1" required></td>
+                       <td><input name="pressure1" type="text" size="1" required></td>
+                     </tr>
+                     <tr>
+                       <td>Обратный трубопровод</td>
+                       <td><input name="tempT2winter" type="text" size="1" required></td>
+                       <td><input name="tempT2summer" type="text" size="1" required></td>
+                       <td><input name="pressure2" type="text" size="1" required></td>
+                     </tr>
+                     </table>
+		   
+
+                    <p><input name="checkpipe" type="checkbox" value="1.15" > - коэффициент запаса 1.15 на трубопроводы </p>
+			
+                    <p><input name="checkequipment" type="checkbox" value="1.15" > - коэффициент запаса 1.15 на оборудование </p>
+		     <input type="hidden" name="id"   value="0" />
+
+			
+                    <table border="1" cellpadding="2" cols="7" width=100% id="Table1" class='table_calc_edit'>
+        <caption>Параметры систем :</caption>
+                     <tr> 
+                       <td>Наименование системы</td> 
+                       <td>Тепловая нагрузка системы, Гкал/ч</td>
+                       <td>Температура теплоносителя в подающем трубопроводе, С</td>
+                       <td>Температура теплоносителя в обратном трубопроводе, С</td>
+                       <td>Высота системы, м.в.ст.</td>
+                       <td>Сопро- тивление системы, м.в.ст.</td>
+                       <td>Содер- жание гликоля в жидкости, %</td>
+                     </tr>
+                     <tr> 
+                       <td colspan='7'><button type="button" onclick="addRow()">Добавить систему</button></td>
+                     </tr>
+
+                     
+                     </table>
+		    
+      <p>              </p>
+		    <table border="1" cellpadding="2" cols="2" width=100% class='table_calc_edit' >
+        <caption>Дополнительные настройки</caption>
+                     <tr>                      
+                       <td>Значение максимальной скорости в трубопроводе, м/с</td>
+                       <td>Значение максимального сопротивления в трубопроводе, м/с</td>
+                     </tr>        
+		     <tr>                      
+                       <td><input name="maxv" type="text" size="1" value="1.0" ></td>
+                       <td><input name="maxh" type="text" size="1" value="10.0" ></td>
+                     </tr>                  
+                     </table>
+		   <p><input type="submit" value="Расчет"></p>
+                </form>		
+                <!--</body>
+                </html>-->

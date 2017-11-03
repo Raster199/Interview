@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../content/editor/style.css">
+    <script src="../content/editor/script.js"></script>
+    <script src="../content/editor/jquery.js"></script>
+    <script src="../content/editor/jquery.validate.min.js"></script>
+    
+  </head>
+
+  <body>
+
+   <div id="container">
+   <div id="header">Опрос</div>
+
+   <div id="sidebar" >
+    <p><input type="button" value="Создать новый опрос" onclick="newOpros()"></p>
+    <p><input type="button" value="Список опросов" onclick="listSurvey()"></p>
+    <p><input type="button" value="Добавить участника опроса" onclick="addEmployee()"></p>
+    <p><input type="button" value="Отправить опрос" onclick="sendSurveyFromEmployee()"></p>
+    <p><a href="ask.html">Список сотрудников</a></p>
+   </div>
+     <div id="content">
+
+     </div>
+   <div id="footer">&copy</div>
+  </div> 
+
+	<div id="win" style="display:none;">
+	   <div class="overlay"></div>
+		  <div class="visible">
+		    <h3>Добавить вопрос</h3>
+			  <form id="changeAliasForm">
+		      	<div id="inWindow">
+		      	</div>
+			  </form>
+		    <button type="button" onClick="getElementById('win').style.display='none';">закрыть</button>
+		    <button type="button" onClick="newQuestion()">Добавить</button>
+		</div>
+	</div>
+
+
+  </body>
+
+</html>

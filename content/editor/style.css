@@ -1,0 +1,121 @@
+/* Styles go here */
+
+body {
+    font: 10pt Arial, Helvetica, sans-serif; /* Шрифт на веб-странице */
+    background: #e1dfb9; /* Цвет фона */
+   }
+   h2 {
+    font-size: 1.1em; /* Размер шрифта */
+    color: #800040; /* Цвет текста */
+    margin-top: 0; /* Отступ сверху */
+   }
+   #container {
+    width: 1200px; /* Ширина слоя */
+    margin: 0 auto; /* Выравнивание по центру */
+    background: #f0f0f0; /* Цвет фона левой колонки */
+   }
+   #header {
+    font-size: 2.2em; /* Размер текста */
+    text-align: center; /* Выравнивание по центру */
+    padding: 5px; /* Отступы вокруг текста */
+    background: #8fa09b; /* Цвет фона шапки */
+    color: #ffe; /* Цвет текста */
+   }
+   #sidebar {
+    margin-top: 10px; 
+    width: 200px; /* Ширина слоя */
+    padding: 0 10px; /* Отступы вокруг текста */
+    float: left; /* Обтекание по правому краю */
+   }
+   #content {
+    /*width: 80%; /* Ширина слоя */
+    margin-left: 200px; /* Отступ слева */
+    padding: 10px; /* Поля вокруг текста */
+    background: #fff; /* Цвет фона правой колонки */
+   }
+   #footer {
+    background: #8fa09b; /* Цвет фона подвала */
+    color: #fff; /* Цвет текста */
+    padding: 5px; /* Отступы вокруг текста */
+    clear: left; /* Отменяем действие float */
+   }
+	.overlay {
+		background: #000;
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: 1000;
+		opacity: .5;
+	}
+
+	.visible {
+		background: #fff;
+		position: fixed;
+		left: 50%;
+		top: 50%;
+		margin-top: -200px;
+		overflow: hidden;
+		z-index: 2000;
+		width: 500px;
+		padding: 0px;
+		margin-left: -250px;
+	}
+
+	#win button {
+		float: right;
+		line-height: 20px;
+		margin: 1.2em;
+		border: none;
+		background: transparent;
+		color: blue;
+	}
+	#win button[type="button"]:hover {
+		cursor: pointer;
+		color: navy;
+		text-decoration: underline;
+	}
+	#win h3 {
+		text-align: center;
+		color: #555;
+	}
+
+	#inWindow {
+		padding: 0 1em;
+		border-top: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+		background: WhiteSmoke;
+	}
+	.error{
+	  color: red;
+	}
+	/*#toServer input:disabled {
+		border: none;
+		background: transparent;
+		color: black;
+	}*/
+
+	p.styleFormContext {
+		font-size: 1.1em; /* Размер шрифта */
+		color: #800040; /* Цвет текста */
+		margin-top: 0; /* Отступ сверху */
+
+        }
+	input.styleFormQuestion {
+		border: none;
+		background: transparent;
+		color: #800040;
+	}
+	input.styleFormAnswer {
+		border: none;
+		background: transparent;
+		color: black;
+	}
+
+	#content td:nth-child(2) {
+		display:none;
+	}
+
+
+

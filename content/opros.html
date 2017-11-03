@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html">
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="https://surveyjs.azureedge.net/0.12.23/survey.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://surveyjs.azureedge.net/0.12.23/survey.jquery.min.js"></script>
+  <title>Опрос</title>
+
+  
+    
+
+
+
+
+<script type='text/javascript'>
+window.onload=function(){
+var surveyJSON = 
+{
+ pages: [
+  {
+   elements: [
+    {
+     type: "radiogroup",
+     choices: [
+      "Да",
+      "Конечно",
+      "Всенепременнейше"
+     ],
+     isRequired: true,
+     name: "Считаете ли Вы меня клёвым?"
+    },
+    {
+     type: "checkbox",
+     choices: [
+      "Секс",
+      "Драгс",
+      "Рок энд Ролл"
+     ],
+     isRequired: true,
+     name: "Ваши предпочтения"
+    },
+    {
+     type: "rating",
+     isRequired: true,
+     name: "Оцените по пятибальной шкале Вашу удовлетворённость творчеством Ромы Жёлудя"
+    },
+    {
+     type: "text",
+     isRequired: true,
+     name: "Ваш Комментарий"
+    }
+   ],
+   name: "page1"
+  }
+ ]
+};
+
+var survey = new Survey.Model(surveyJSON);
+$("#surveyContainer").Survey({
+    model:survey,
+    onComplete:sendDataToServer
+});
+
+function sendDataToServer(survey) {
+  var resultAsString = JSON.stringify(survey.data);
+  alert(resultAsString); //send Ajax request to your web server.
+}
+}
+
+</script>
+
+  
+</head>
+
+<body>
+  
+
+<div id="surveyContainer"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+                <html>
+                <head>
+                    <meta charset="UTF-8">
+                    <title>Расчет оборудования теплового пункта</title>
+                </head>
+                <body>
+                  <h3>Расчет оборудования теплового пункта</h3>
+                    <form accept-charset="UTF-8" action="{{newSystem}}" >
+                    <label for="nameobject">Наименование объекта :</label>
+                    <input type="text" value="{{name}}" required>
+                   <h4>Параметры тепловой сети :</h4>
+                   <table border="1" cellpadding="2" cols="4" >
+                     <tr> 
+                       <td></td>
+                       <td>Температура в зимний период</td>
+                       <td>Температура в летний период</td>
+                       <td>Давление</td>
+                     </tr>
+                     <tr>
+                       <td>Подающий трубопровод</td>
+                       <td><input name="tempT1winter" type="text" value="{{tempT1winter}}" required></td>
+                       <td><input name="tempT1summer" type="text" value="{{tempT1summer}}" required></td>
+                       <td><input name="pressure1" type="text" value="{{pressure1}}" required></td>
+                     </tr>
+                     <tr>
+                       <td>Обратный трубопровод</td>
+                       <td><input name="tempT2winter" type="text" value="{{tempT2winter}}" required></td>
+                       <td><input name="tempT2summer" type="text" value="{{tempT2summer}}" required></td>
+                       <td><input name="pressure2" type="text" value="{{pressure2}}" required></td>
+                     </tr>
+                     </table>
+                   <h4>Параметры систем :</h4>
+                    <input name="resOnTr" type="checkbox" value="{{checkpipe}}" <p> - коэффициент запаса 1.15 на трубопроводы </p>
+                    <input name="resOnOb" type="checkbox" value="{{checkquipment}}" <p> - коэффициент запаса 1.15 на оборудование </p>
+		    <input type="hidden" name="id"   value="{{id}}" />
+		    <p><input type="submit" value="Добавить систему"></p>
+		    </form>
+
+                    <table border="1" cellpadding="2" cols="6" width=300>
+                     <tr> 
+                       <td>Наименование системы</td> 
+                       <td>Тепловая нагрузка системы,Гкал/ч</td>
+                       <td>Температура теплоносителя в подающем трубопроводе,С</td>
+                       <td>Температура теплоносителя в обратном трубопроводе,С</td>
+                       <td>Высота системы,м.в.ст.</td>
+                       <td>Сопротивление системы,м.в.ст.</td>
+                       <td>Содержание гликоля в жидкости,%</td>
+                     </tr>
+		     {{putTable1}}
+                     </table>
+		    
+		    <p>Расширенные настройки (не обязательны к заполнению)</p>
+		    <table border="1" cellpadding="2" cols="2" width=400 >
+                     <tr>                      
+                       <td>Значение максимальной скорости в трубопроводе, м/с</td>
+                       <td>Значение максимального сопротивления в трубопроводе, м/с</td>
+                     </tr>                     
+		     {{putTable2}}
+                     </table>
+                   <form accept-charset="UTF-8" action="{{Calculate}}" method="post" >
+		     <p><input type="submit" value="Расчет"></p>
+		   </form>
+                </body>
+                </html>

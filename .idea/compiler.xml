@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="I_main" target="1.5" />
+      <module name="I_test" target="1.5" />
+      <module name="In_main" target="1.5" />
+      <module name="In_test" target="1.5" />
+      <module name="Ine==_main" target="1.5" />
+      <module name="Ine==_test" target="1.5" />
+      <module name="Ine_main" target="1.5" />
+      <module name="Ine_test" target="1.5" />
+      <module name="Inter_main" target="1.5" />
+      <module name="Inter_test" target="1.5" />
+      <module name="Interview_main" target="1.5" />
+      <module name="Interview_test" target="1.5" />
+      <module name="ServletTest_main" target="1.5" />
+      <module name="ServletTest_test" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

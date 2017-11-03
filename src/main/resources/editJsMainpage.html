@@ -1,0 +1,70 @@
+<!--<!DOCTYPE html>
+<html>
+  <head>-->
+    <meta charset="UTF-8">
+    <title>Расчет оборудования теплового пункта</title>
+    <!--<script src="../../../src/main/webapp/tableJS.js"></script>
+    <link href="../../../src/main/webapp/tableCalc.css" rel="stylesheet" type="text/css">
+    <link href="../../../src/main/webapp/editTableCalc.css" rel="stylesheet" type="text/css">-->
+  <!--</head>
+  <body>-->
+    <h2>Расчет оборудования теплового пункта</h2>
+    <form accept-charset="UTF-8" action="{{Calculate}}" method="POST" >
+      <label align="center" for="nameobject">Наименование объекта :</label>
+      <input charset="UTF-8" type="text" name="name" value="{{name}}" required>
+      <p>              </p>
+      <!--<h4>Параметры тепловой сети :</h4>-->
+      <table border="1" cellpadding="2" cols="4" width=100% class='table_calc_edit' >
+        <caption>Параметры тепловой сети :</caption>
+        <tr> 
+          <td></td>
+          <td >Температура в зимний период</td>
+          <td >Температура в летний период</td>
+          <td >Давление</td>
+        </tr>
+        <tr>
+          <td>Подающий трубопровод</td>
+          <td><input name="tempT1winter" type="text" size="1" value="{{tempT1winter}}" required></td>
+          <td><input name="tempT1summer" type="text" size="1" value="{{tempT1summer}}" required></td>
+          <td><input name="pressure1" type="text" size="1" value="{{pressure1}}" required></td>
+        </tr>
+        <tr>
+          <td >Обратный трубопровод</td>
+          <td><input name="tempT2winter" type="text" size="1" value="{{tempT2winter}}" required align="center"></td>
+          <td><input name="tempT2summer" type="text" size="1" value="{{tempT2summer}}" required align="center"></td>
+          <td><input name="pressure2" type="text" size="1" value="{{pressure2}}" required align="center"></td>
+        </tr>
+      </table>
+     <!--<h4>Параметры систем :</h4>-->
+      <p><input name="checkpipe" type="checkbox" value="1.15" > - коэффициент запаса 1.15 на трубопроводы </p>
+      <p><input name="checkequipment" type="checkbox" value="1.15" > - коэффициент запаса 1.15 на оборудование </p>
+      <input type="hidden" name="id"   value="{{id}}"/>
+      <table border="1" cellpadding="2" cols="7" width=100% id="Table1" class='table_calc_edit'>
+        <caption>Параметры систем :</caption>
+        <tr> 
+          <td>Наименование системы</td> 
+          <td>Тепловая нагрузка системы, Гкал/ч</td>
+          <td>Температура теплоносителя в подающем трубопроводе, С</td>
+          <td>Температура теплоносителя в обратном трубопроводе, С</td>
+          <td>Высота системы, м.в.ст.</td>
+          <td>Сопро- тивление системы, м.в.ст.</td>
+          <td>Содер- жание гликоля в жидкости, %</td>
+        </tr>
+	{{putTable1}}
+        <tr> 
+          <td colspan='7'><button type="button" onclick="addRow()" >Добавить систему</button></td>
+        </tr>                     
+      </table>
+      <p>              </p>
+      <table border="1" cellpadding="2" cols="2" width=100% class='table_calc_edit'>
+        <caption>Дополнительные настройки</caption>
+        <tr>                      
+          <td>Значение максимальной скорости в трубопроводе, м/с</td>
+          <td>Значение максимального сопротивления в трубопроводе, м/с</td>
+        </tr>        
+	{{putTable2}}                    
+      </table>
+      <p><input type="submit" value="Расчет"></p>
+    </form>		
+  <!--</body>
+</html>-->

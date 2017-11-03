@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+           <meta charset="UTF-8">
+	   <title>Список расчетов</title>
+<link  href="../../../src/main/webapp/tableCalc.css" rel="stylesheet" type="text/css">
+		<!--<style>
+		@import "tableCalc.css";
+		</style>-->
+	   <!--<style type="text/css">
+		.table_calc {
+		  border-collapse: collapse;
+		  border-left: 3px solid rgb(13,184,107)/*#F79361*/;
+		  border-right: 3px solid rgb(13,184,107);
+		  border-bottom: 3px solid rgb(13,184,107);
+		  font-family: "Lucida Grande", sans-serif;
+		 }
+		.table_calc caption {
+		  background: rgb(13,184,107); 
+		  border-top-left-radius: 10px;
+		  border-top-right-radius: 10px;
+		  padding: 10px;
+		  box-shadow: 0 2px  4px 0 rgba(0,0,0,.3);
+		  color: white;
+		  font-family: "Roboto Slab",serif;
+		  font-style: normal;
+		  font-size: 26px;
+		  text-align: center;
+		  margin: 0;
+		}
+		.table_calc td, .table_price th {
+		  padding: 10px;
+		}
+		.table_calc th {
+		  text-align: left;
+		  font-size: 18px;
+		}
+		.table_calc tr:nth-child(2n) {
+		  background: #E5E5E5;
+		}
+		.table_calc td:last-of-type {
+		  text-align: center;
+		}
+		.table_calc a {
+		  display: inline-block;
+		  padding: 5px 10px;
+		  background: rgb(195, 199, 197);
+		  box-shadow: 2px 2px 0 0 rgb(146, 150, 148)/*#a22800*/;
+		  position: relative;
+		  font-family: "Lucida Grande", sans-serif;
+		  text-decoration: none;
+		  color: rgb(45, 48, 47);
+		}
+		.table_calc a:hover {
+		  box-shadow: none;
+		  top: 2px;
+		  left: 2px;
+		}
+	   </style>-->
+        </head>
+        <body >
+
+	    <a href = "http://localhost:8080/ServletTest/Project/add">создать новый расчет</a>
+            <table  border="1" cellpadding="4" cols="5" class="table_calc"><caption>Список расчетов</caption>
+	       <tr>
+                  <td>№</td>
+                  <td coolspan=3>Наименование объекта</td>
+               </tr>
+	       {{name}}
+            </table>
+        </body>
+
+    </html>
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+</head>
+<body>
+<form accept-charset="UTF-8" action="addSystem" >
+<input type="hidden" name="id"   value="{{id}}" />
+		    <table border="1" cellpadding="2" cols="6" width=50%>
+                     <tr> 
+                       <td>Наименование системы</td> 
+                       <td>Тепловая нагрузка системы,Гкал/ч</td>
+                       <td>Температура теплоносителя в подающем трубопроводе,С</td>
+                       <td>Температура теплоносителя в обратном трубопроводе,С</td>
+                       <td>Высота системы,м.в.ст.</td>
+                       <td>Сопротивление системы,м.в.ст.</td>
+                       <td>Содержание гликоля в жидкости,%</td>
+                     </tr>
+                     <tr>
+                       <td><select name="system">
+                           <option value="1">Отопление</option> 
+                           <option value="2">Вентиляция</option>
+                           <option value="3">ГВС</option>
+                           </select>
+                       </td>
+                       <td><input name="countheat" type="text" required></td>
+                       <td><input name="tempt11" type="text" required></td>
+                       <td><input name="tempt21" type="text" required></td>
+                       <td><input name="heightsyst" type="text" required></td>
+                       <td><input name="dh" type="text" required></td>
+                       <td><input name="countglikol" type="text" required ></td>
+                     </tr>
+                     </table>
+		    
+		    <p>Расширенные настройки (не обязательны к заполнению)</p>
+		    <table border="1" cellpadding="2" cols="5" width=400 >
+                     <tr> 
+                       <td>Значение максимальной скорости в трубопроводе, м/с</td>
+                       <td>Значение максимального сопротивления в трубопроводе, м/с</td>
+                     </tr>
+                     <tr>                       
+                       <td><input name="maxv" type="text" value="1.0" ></td>
+                       <td><input name="maxh" type="text" value="10.0" ></td>
+                     </tr>
+                     </table>
+		     <p><input type="submit" value="Добавить систему"></p>
+
+</form>
+		     <form action="edit/id/{{id}}">
+		     <p><input type="submit" value="Выход"></p>
+		     </form>
+</body>
+</html>

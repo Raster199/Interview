@@ -1,0 +1,7 @@
+2017-10-31 18:19:38.626 [http-nio-8080-exec-663] INFO  ru.interview.web.MainServlet MainServlet:17 -  --- doGet ---
+2017-10-31 18:19:38.632 [http-nio-8080-exec-663] INFO  ru.interview.web.UrlParser UrlParser:51 - URL editor/
+2017-10-31 18:19:40.785 [http-nio-8080-exec-654] INFO  ru.interview.web.MainServlet MainServlet:32 -  --- doPost ---
+2017-10-31 18:19:40.786 [http-nio-8080-exec-654] INFO  ru.interview.web.UrlParser UrlParser:76 - URL sendSurveyFromEmployee
+2017-10-31 18:19:40.786 [http-nio-8080-exec-654] INFO  ru.interview.web.pages.Opros Opros:68 - email i.dybtsyn@rtinform.ru
+2017-10-31 18:21:50.560 [http-nio-8080-exec-670] INFO  ru.interview.web.MainServlet MainServlet:17 -  --- doGet ---
+2017-10-31 18:21:50.560 [http-nio-8080-exec-670] INFO  ru.interview.web.UrlParser UrlParser:51 - URL questionary

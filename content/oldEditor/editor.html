@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Survey Editor</title>
+    <script src="../Interview/content/editor/jquery.js"></script>
+    <script src="../Interview/content/editor/knockout-min.js"></script>
+    <script src="../Interview/content/editor/survey.ko.js"></script>
+    <script src="../Interview/content/editor/ace.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../Interview/content/editor/worker-json.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../Interview/content/editor/mode-json.js" type="text/javascript" charset="utf-8"></script>
+    <link href="../Interview/content/editor/select2.min.css" rel="stylesheet" />
+    <script src="../Interview/content/editor/select2.min.js"></script>
+    <link href="../Interview/content/editor/surveyeditor.css" type="text/css" rel="stylesheet" />
+    <script src="../Interview/content/editor/surveyeditor.js"></script>
+    <link rel="stylesheet" href="../Interview/content/editor/bootstrap.min.css">
+    <script src="../Interview/content/editor/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../Interview/content/editor/index.css">
+
+
+</head>
+
+<body>
+    <div id="surveyContainer">
+    <div id="editorElement"></div>
+    </div>
+
+<script type="text/javascript" src="../Interview/content/editor/index.js"></script>
+    
+
+<script>
+document.getElementById('svd-save').onclick = function() {
+	$.post(
+    '/Interview/saveTemplate',
+    editor.text);
+};
+</script>
+
+
+	<script type="text/javascript">
+/*	$( document ).ready(function() {
+	//$(".form-group").attr('style','display:none');
+//$(".svd_toolbar").append("<li class=\"svd_actions\" data-bind=\"css: $data.css, visible: visible, attr: { id: id }\" id=\"svd-sendToServer\" style=\"\"><button type=\"button\" class=\"btn btn-primary\" data-bind=\"enable: $data.enabled || true, click: action, css: $data.innerCss\"disabled=\"\"><span data-bind=\"text: title\">Send to server</span></button></li>");
+
+});*/
+
+	</script>
+
+</body>
+</html>

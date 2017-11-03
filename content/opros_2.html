@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html">
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="http://surveyjs.azureedge.net/0.12.23/survey.css">
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="http://surveyjs.azureedge.net/0.12.23/survey.jquery.min.js"></script>
+  <title>Опрос</title>
+
+<script type='text/javascript'>
+Survey.Survey.cssType = "bootstrap";
+//Survey.defaultBootstrapCss.navigationButton = "btn btn-green";
+
+window.onload=function(){
+var surveyJSON = 
+{
+ pages: [
+  {
+   elements: [
+    {
+     type: "radiogroup",
+     choices: [
+      "Да",
+      "Конечно",
+      "Всенепременнейше"
+     ],
+     isRequired: true,
+     name: "question1",
+     title: "Считаете ли Вы меня клёвым?"
+    },
+    {
+     type: "checkbox",
+     choices: [
+      "Секс",
+      "Драгс",
+      "Рок энд Ролл"
+     ],
+     isRequired: true,
+     name: "question2",
+     title: "Ваши предпочтения"
+    },
+    {
+     type: "rating",
+     isRequired: true,
+     title: "Оцените по пятибальной шкале Вашу удовлетворённость творчеством Ромы Жёлудя",
+     name: "question3"
+    },
+    {
+     type: "text",
+     isRequired: true,
+     title: "Ваш Комментарий",
+     name: "question4"
+    },
+    {
+	//type: "text",
+    name: "key"
+    }
+   ],
+   name: "questionary"
+  }
+ ]
+};
+
+var survey = new Survey.Model(surveyJSON);
+$("#surveyContainer").Survey({
+    model:survey,
+    onComplete:sendDataToServer
+});
+
+function sendDataToServer(survey) {
+  survey.setValue('key', "{{keyPars}}");
+  var resultAsString = JSON.stringify(survey.data );
+	$.post(
+      '/ServletTest/savedata',
+      resultAsString);
+  //alert(resultAsString)); //send Ajax request to your web server.
+};
+};
+
+</script>
+
+  
+</head>
+
+<body>
+  
+
+<div id="surveyContainer"></div>
+
+</body>
+
+</html>
